@@ -1,0 +1,13 @@
+#btnsDiv {
+    border: 1px solid black;
+}
+#addShow {
+    border: 1px solid black;
+}
+#gifsHolderDiv {
+    border: 1px solid black;
+}
+#newDiv {
+    border: 1px solid red;
+    display: inline-block;
+}
