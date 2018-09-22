@@ -18,7 +18,7 @@ $("#submitBtn").on("click", function(event) {
 
 $("#btnsDiv").on("click", function(event){
     let show = $(event.target).text();
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + show + " TV&api_key=dtUIzKvehNyBcZktUSC8WrdG25ZRh6jP&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + " TV&api_key=dtUIzKvehNyBcZktUSC8WrdG25ZRh6jP&limit=10";
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -40,22 +40,22 @@ $("#btnsDiv").on("click", function(event){
             $(ratingText).prependTo(gifDiv);
         }
     });
-    $("#gifsHolderDiv")/*.off("click")*/.on("click", ".gifResult", function(event) {
-        console.log("Inside gifsHolderDiv function.");
-        if($(event.target).attr("type") === "still") {
-            $(event.target).attr("type", "gif");
-            const stillGif = $(event.target).attr("src");
-            const animatedGif = $(event.target).attr("subLink");
-            $(event.target).attr("src", animatedGif);
-            $(event.target).attr("subLink", stillGif);
-        }
-        else if ($(event.target).attr("type") === "gif") {
-            $(event.target).attr("type", "still");
-            const animatedGif = $(event.target).attr("src");
-            const stillGif = $(event.target).attr("subLink");
-            $(event.target).attr("src", stillGif);
-            $(event.target).attr("subLink", animatedGif);
-        }
-    });
+});
+$("#gifsHolderDiv").on("click", ".gifResult", function(event) {
+    console.log("Inside gifsHolderDiv function.");
+    if($(event.target).attr("type") === "still") {
+        $(event.target).attr("type", "gif");
+        const stillGif = $(event.target).attr("src");
+        const animatedGif = $(event.target).attr("subLink");
+        $(event.target).attr("src", animatedGif);
+        $(event.target).attr("subLink", stillGif);
+    }
+    else if ($(event.target).attr("type") === "gif") {
+        $(event.target).attr("type", "still");
+        const animatedGif = $(event.target).attr("src");
+        const stillGif = $(event.target).attr("subLink");
+        $(event.target).attr("src", stillGif);
+        $(event.target).attr("subLink", animatedGif);
+    }
 });
 });
