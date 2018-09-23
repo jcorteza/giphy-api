@@ -41,6 +41,9 @@ button {
     padding-right: 5%;
     color: #E2FAFC;
 }
+#introText img {
+    margin: 3% 0%;
+}
 #btnsDiv {
     flex: 1 1 50%;
     padding-top: 1%;
