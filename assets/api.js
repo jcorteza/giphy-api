@@ -35,7 +35,7 @@ $(document).ready(function() {
         if(currentShowGif === "") {
             currentShowGif = show;
         }
-        else if (currentShowGif !== show && limit === 30) {
+        else if (currentShowGif !== show) {
             limit = 0;
             currentShowGif = show;
         }
