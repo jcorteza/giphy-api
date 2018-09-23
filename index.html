@@ -6,20 +6,29 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./assets/reset.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Righteous|Roboto" rel="stylesheet">
     <title>Giphy API</title>
 </head>
 <body>
-    <div class="container">
-        <div id="btnsDiv"></div>
+    <div class="flex-row-1">
+        <div id ="introText">
+            <h1>TV Giphy-Add</h1>
+            <p>Click on a show to browse GIFs or add your own TV show to customize your giphy experience. Click on the same button up to three times to add 10 gifs to the page.</p>
+        </div>
+        <div>
+            <div id="btnsDiv"></div>
+        </div>
+    </div>
+    <div class="flex-row-2">
         <div id="addShow">
-            <p>Add a TV show</p>
             <form>
-                <input id="addGIF" type="text"/></br>
+                Add a TV show
+                <input id="addGIF" type="text"/>
                 <input id="submitBtn" type="submit" value="Submit"/>
             </form>
         </div>
-        <div id="gifsHolderDiv"></div>
-    </div>
+        <div id="gifsHolderDiv" class="col three-quarters"></div>
+        </div>
     <script src="./assets/api.js"></script>
 </body>
 </html>

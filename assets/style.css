@@ -1,13 +1,134 @@
-#btnsDiv {
-    border: 1px solid black;
+body {
+    background-color: #4DCCBD;;
 }
-#addShow {
-    border: 1px solid black;
+div {
+    margin: 0px;
+}
+.flex-row-1, .flex-row-2 {
+    display: flex;
+    padding: 3% 5%;
+}
+.flex-row-1 {
+    background-color: #231651;
+    justify-content: space-around;
+}
+.flex-row-2 {
+    justify-content: space-between;
+}
+h1 {
+    font-size: 2rem;
+    padding: 0px 0px 5% 0px;
+    white-space: nowrap;
+    font-family: 'Righteous', cursive;
+}
+p {
+    line-height: 1.5rem;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+}
+button {
+    border-radius: 5px;
+    padding: .5rem;
+    font-size: .75rem;
+    margin: 0px 1% 1% 0px;
+    background-color: #4DCCBD;
+    border: none;
+    color: #E2FAFC;
+    font-weight: bolder;
+}
+#introText {
+    flex: 1 1 50%;
+    padding-right: 5%;
+    color: #E2FAFC;
+}
+#btnsDiv {
+    flex: 1 1 50%;
+    padding-top: 1%;
+    width: 90%;
+    margin-left: auto;
 }
 #gifsHolderDiv {
-    border: 1px solid black;
+    box-sizing: border-box;
+    order: 1;
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 3000px;
+    flex: 1 1 80%;
+    align-content: flex-start;
+    overflow: auto;
 }
-#newDiv {
-    border: 1px solid red;
-    display: inline-block;
+#addShow {
+    box-sizing: border-box;
+    order: 2;
+    flex: 1 1 20%;
+    clear: both;
+    font-family: 'Roboto', sans-serif;
+    color: #231651;
+    font-weight: bolder;
+}
+#submitBtn {
+    background-color: #231651;
+    color: #E2FAFC;
+    border-radius: 5px;
+    padding: .25rem;
+    font-size: .75rem;
+    border: none;
+    margin-top: 2%;
+} 
+.newDiv {
+    margin-right: 2%;
+    max-width: 200px;
+    background-color: #E2FAFC;;
+    margin-bottom: 2%;
+}
+.newDivText {
+    box-sizing: border-box;
+    padding: 2% 4%;
+}
+@media screen and (max-width: 880px) {
+    #gifsHolderDiv {
+        max-height: 4500px;
+    }
+}
+@media screen and (max-width: 640px) {
+    h1{
+        padding-bottom: 2%;
+    }
+   #introText {
+       text-align: center;
+        margin-right: 0px;
+   }
+   .flex-row-1, .flex-row-2 {
+        display: flex;
+        flex-flow: column nowrap;
+        align-content: center;
+    }
+    #addShow {
+        order: 0;
+        margin: auto;
+    }
+    #gifsHolderDiv {
+        box-sizing: border-box;
+        order: 1;
+        display: flex;
+        flex-flow: column wrap;
+        max-height: 4500px;
+        flex: 1 1 80%;
+        align-content: flex-start;
+        overflow: auto;
+        align-content: center;
+    }
+    .newDiv {
+        margin: 0px 1%;
+    }
+    #btnsDiv {
+        width: 100%;
+        margin-top: 2%;
+    }
+}
+@media screen and (max-width: 470px) {
+     #gifsHolderDiv {
+        max-height: 100%;
+        align-items: center;
+    }
 }
