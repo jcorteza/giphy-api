@@ -59,7 +59,7 @@ $(document).ready(function() {
                 const ratingText = $("<p>").text("Rating: " + result[i].rating);
                 const titleText = $("<p>").text("Title: " + result[i].title);
                 const scoreText = $("<p>").text("Score: " + result[i]._score);
-                const gifImg = $("<img class=\"gifResult\">").attr("src", result[i].images.fixed_width_still.url);;
+                const gifImg = $("<img class=\"gifResult\">").attr("src", result[i].images.fixed_width_still.url);
                 if ($(gifImg).attr("type")) {
                     $(gifImg).removeAttr("type");
                 }
