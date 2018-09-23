@@ -51,7 +51,7 @@ $(document).ready(function() {
             method: "GET"
         }).then(function(response){
             var result = response.data;
-            //console.log(result);
+            console.log(result);
             $(gifsHolderDiv).empty();
             for(i = 0; i < result.length; i++) {
                 const gifDiv = $("<div>").attr("class", "newDiv");
@@ -59,12 +59,14 @@ $(document).ready(function() {
                 const ratingText = $("<p>").text("Rating: " + result[i].rating);
                 const titleText = $("<p>").text("Title: " + result[i].title);
                 const scoreText = $("<p>").text("Score: " + result[i]._score);
-                const gifImg = $("<img class=\"gifResult\">").attr("src", result[i].images.fixed_width_still.url);;
+                const gifImg = $("<img class=\"gifResult\">").attr("src", result[i].images.fixed_width_still.url);
+                const dwnldImg = $("<img>").attr("src", "./assets/download.png")
+                $(dwnldImg).wrap("<a href=\"" + result[i].images.fixed_width_still.url + "\" download></a>");
                 if ($(gifImg).attr("type")) {
                     $(gifImg).removeAttr("type");
                 }
                 $(gifImg).attr("type", "still").attr("data-sublink", result[i].images.fixed_width.url);
-                $(titleText).add(scoreText).add(ratingText).appendTo(gifInfoDiv);
+                $(titleText).add(scoreText).add(ratingText).add(dwnldImg).appendTo(gifInfoDiv);
                 $(gifImg).add(gifInfoDiv).appendTo(gifDiv);
                 $(gifDiv).appendTo($("#gifsHolderDiv"));
             }
