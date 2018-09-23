@@ -106,6 +106,7 @@ button {
     #addShow {
         order: 0;
         margin: auto;
+        margin-bottom: 5%;
     }
     #gifsHolderDiv {
         box-sizing: border-box;
