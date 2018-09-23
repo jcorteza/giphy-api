@@ -51,7 +51,7 @@ $(document).ready(function() {
             method: "GET"
         }).then(function(response){
             var result = response.data;
-            console.log(result);
+            //console.log(result);
             $(gifsHolderDiv).empty();
             for(i = 0; i < result.length; i++) {
                 const gifDiv = $("<div>").attr("class", "newDiv");
